@@ -9,7 +9,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Stock Performance Dashboard</h1>
+        <h1>Nostalgia</h1>
       </header>
       <div className="main-content">
         <InputForm setGraphData={setGraphData} />

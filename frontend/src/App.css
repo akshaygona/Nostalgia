@@ -1,55 +1,118 @@
+/* General Styling */
 .app-container {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: #121212;
+  color: #e0e0e0;
 }
 
+/* Header */
 .app-header {
-  padding: 10px 20px;
-  background-color: #f5f5f5;
+  padding: 20px;
+  background: linear-gradient(90deg, #1a1a1a, #333);
   text-align: left;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #f5f5f5;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 }
 
+/* Main Content */
 .main-content {
   display: flex;
   flex: 1;
+  gap: 20px;
+  padding: 20px;
+  background-color: #181818;
 }
 
+/* Left Input Form */
 .input-form {
   flex: 1;
+  max-width: 350px;
   padding: 20px;
-  background-color: #f0f0f0;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
 }
 
 .input-form form div {
-  margin-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.input-form input,
+.input-form button {
+  width: 100%;
+  padding: 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
 }
 
 .input-form input {
-  padding: 5px;
-  width: 100%;
+  background-color: #252525;
+  color: #e0e0e0;
+  margin-bottom: 10px;
+}
+
+.input-form input:focus {
+  outline: none;
+  border: 1px solid #007bff;
 }
 
 .input-form button {
-  padding: 10px;
   background-color: #007bff;
   color: white;
-  border: none;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .input-form button:hover {
   background-color: #0056b3;
 }
 
+/* Graph Container */
 .graph-container {
-  flex: 2;
+  flex: 2.5;
   padding: 20px;
+  background: linear-gradient(145deg, #1e1e1e, #2a2a2a);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
+/* Graph Placeholder */
 .graph-placeholder {
   text-align: center;
   color: #888;
   padding: 50px;
+  font-size: 1.2rem;
+}
+
+.graph-placeholder::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .input-form {
+    max-width: 100%;
+  }
 }
